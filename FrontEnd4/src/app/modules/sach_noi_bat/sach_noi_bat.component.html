@@ -1,0 +1,33 @@
+<!-- list ds sản phẩm nổi bật -->
+<section class="ds_sp_noi_bat container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="title_module">
+                Sách nổi bật
+            </div>
+            <div class="col-sm-6 col-md-3 col-lg-3" *ngFor="let san_pham of mang_san_pham">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 item_sp_noi_bat">
+                    <a href="chi_tiet_sach.php?id_sach=2">
+                        <div class="hinh_sach">
+                            <img src="assets/images/sach/{{san_pham.hinh}}">
+                        </div>
+                    </a>
+                    <div class="thong_tin_tom_tat_sach">
+                        <a href="chi_tiet_sach.php?id_sach=2">
+                            <div class="ten_sach">{{san_pham.ten_sach}}</div>
+                            
+                              <div class="don_gia_ban">{{san_pham.don_gia}}</div>
+                              <div class="don_gia_bia">{{san_pham.gia_bia}} </div>
+                        </a>
+                        <a href="them_vao_gio_hang.php?id_sach=2">
+                            <div class="btn_mua_ngay">Mua Ngay</div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+         
+        </div>
+    </div>
+</section>
+<!-- END list ds sản phẩm nổi bật -->

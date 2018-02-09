@@ -1,0 +1,24 @@
+<form role="form">
+    <div class="form-group">
+        <label for="usrname">
+<span class="glyphicon glyphicon-user"></span> Tên đăng nhập</label>
+        <input #ten_dang_nhap type="text" class="form-control" name="ten_dang_nhap" id="ten_dang_nhap" placeholder="Tên đăng nhập">
+    </div>
+    <div class="form-group">
+        <label for="psw">
+<span class="glyphicon glyphicon-eye-open"></span> Mật khẩu</label>
+        <input #frm_login_mat_khau type="password" class="form-control" name="mat_khau" id="frm_login_mat_khau" placeholder="Mật khẩu">
+    </div>
+    <button type="button" (click)="dang_nhap(ten_dang_nhap, frm_login_mat_khau)" class="btn btn-success btn-block">
+<span class="glyphicon glyphicon-off"></span> Đăng nhập</button>
+</form>
+<span *ngIf="Ket_qua=='-1'">Đăng nhập thất bại! </span>
+<span *ngIf="Ket_qua=='1'">Đăng nhập thành công! </span>
+
+<div class="modal-footer">
+    <button type="button" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+<span class="glyphicon glyphicon-remove"></span> Thoát</button>
+    <p>Bạn chưa là thành viên?
+        <a href="">Đăng ký</a>
+    </p>
+</div>
